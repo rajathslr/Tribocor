@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 160" width="100%" height="100%">
+  <style>
+    .title { font-family: 'Arial Black', Impact, sans-serif; font-size: 85px; font-weight: 900; fill: #ffffff; stroke: #000000; stroke-width: 5px; stroke-linejoin: round; letter-spacing: 1px; }
+    .reg { font-size: 25px; stroke-width: 2px; }
+    .green-bar { fill: #8BC34A; }
+    .black-bar { fill: #1A1A1A; }
+    .subtitle { font-family: 'Arial Black', Arial, Helvetica, sans-serif; font-size: 28px; font-style: italic; font-weight: 900; fill: #1A1A1A; letter-spacing: 0.5px; }
+  </style>
+  <text x="15" y="90" class="title">TriboCor<tspan class="reg" dy="-45" dx="5">®</tspan></text>
+  <polygon points="15,105 385,105 365,125 15,125" class="green-bar" />
+  <polygon points="395,105 615,105 615,125 375,125" class="black-bar" />
+  <text x="15" y="155" class="subtitle">High Performance Aerosol</text>
+</svg>
