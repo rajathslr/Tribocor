@@ -35,6 +35,8 @@
             </ul>
             <div class="nav-cta">
                 <a href="#contact" class="btn btn-primary">Enquire Now</a>
+                <img src="img/sv-ventures-logo.png" alt="SV Ventures Logo" class="sv-logo-nav"
+                    onerror="this.src='https://placehold.co/100x50/333/FFF?text=SV+Ventures'">
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -51,7 +53,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h5 class="fade-up">ENGINEERED FOR EXTREMES</h5>
-            <h1 class="fade-up">Superior Lubrication. <br><span class="highlight">Unrivaled Protection.</span></h1>
+            <h1 class="fade-up">Superior Lubrication. <span class="highlight">Unrivaled Protection.</span></h1>
             <p class="fade-up">Precision-engineered aerosols and lubricants designed to optimize performance and
                 longevity in the most demanding industrial environments.</p>
             <div class="hero-btns fade-up">
@@ -137,12 +139,49 @@
                 <!-- Product Card 1 -->
                 <div class="product-card" data-category="motorcycle">
                     <div class="product-img">
-                        <i class="fas fa-motorcycle"></i>
+                        <img src="img/tc40.png" alt="Chain Lube TC 40">
                     </div>
                     <div class="product-info">
                         <h3>Chain Lube TC 40</h3>
-                        <p>Exceptional lubrication, O/X/Z-ring compatible. Smooth movement and extended life.</p>
+                        <p>Adhesive and tacky lube for the lubrication of motorbike chains. Extends chain & sprocket
+                            life, reduces noise & improves mileage.</p>
                         <span class="tag tag-neon">High Performance</span>
+                    </div>
+                </div>
+                <!-- Product Card: TC 84 -->
+                <div class="product-card" data-category="motorcycle">
+                    <div class="product-img">
+                        <img src="img/tc84.png" alt="Shining Spray TC 84">
+                    </div>
+                    <div class="product-info">
+                        <h3>Shining Spray TC 84</h3>
+                        <p>Freshens colors and gives a high gloss. Water and moisture-repellent care product to give
+                            back its shine.</p>
+                        <span class="tag tag-neon">Care Product</span>
+                    </div>
+                </div>
+                <!-- Product Card: TC 205 -->
+                <div class="product-card" data-category="motorcycle">
+                    <div class="product-img">
+                        <img src="img/tc205.png" alt="Super Lube Spray TC 205">
+                    </div>
+                    <div class="product-info">
+                        <h3>Super Lube Spray TC 205</h3>
+                        <p>Adhesive chain lubricant based on solid lubricants. Combines excellent anti-wear protection
+                            for long life of chains and sprockets.</p>
+                        <span class="tag tag-neon">Advanced Lube</span>
+                    </div>
+                </div>
+                <!-- Product Card: TC 212 -->
+                <div class="product-card" data-category="motorcycle">
+                    <div class="product-img">
+                        <img src="img/tc212.png" alt="Chain Lube Dry Type TC 212">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chain Lube Dry Type TC 212</h3>
+                        <p>Teflon based dry lubricant for motorbike chains. Race performance formulation. O/X/Z-ring
+                            compatible.</p>
+                        <span class="tag tag-neon">Race Performance</span>
                     </div>
                 </div>
                 <!-- Product Card 2 -->
@@ -236,6 +275,14 @@
                             <span>No 1, Jevvendeepa Layout, Opp Century Indus, R.R. Nagara, Bangalore - 560098</span>
                         </div>
                     </div>
+
+                    <div class="sv-logo-contact-container">
+                        <p
+                            style="margin-bottom: 10px; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                            Official Distributor</p>
+                        <img src="img/sv-ventures-logo.png" alt="SV Ventures" class="sv-logo-contact"
+                            onerror="this.src='https://placehold.co/200x120/FFF/000?text=SV+Ventures'">
+                    </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
@@ -302,6 +349,23 @@
             </div>
         </div>
     </footer>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modal-img" src="" alt="Product Image">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title">Product Title</h2>
+                    <span id="modal-tag" class="tag tag-neon">Tag</span>
+                    <p id="modal-desc">Product description goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

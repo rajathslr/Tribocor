@@ -111,4 +111,92 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 7. Product Modal
+    const modal = document.getElementById('product-modal');
+    if (modal) {
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalTag = document.getElementById('modal-tag');
+        const closeBtn = document.querySelector('.close-modal');
+
+        // Open modal on click
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.querySelector('.product-img img');
+                const title = card.querySelector('h3').innerText;
+                const desc = card.querySelector('p').innerText;
+                const tag = card.querySelector('.tag').innerText;
+
+                if (img && img.tagName === 'IMG') {
+                    modalImg.src = img.src;
+                    modalImg.style.display = 'block';
+                } else {
+                    modalImg.style.display = 'none'; // Basic fallback for icon ones
+                }
+
+                modalTitle.innerText = title;
+                modalDesc.innerText = desc;
+                modalTag.innerText = tag;
+
+                modal.style.display = 'block';
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 10);
+
+                // Prevent scrolling while modal is open
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal functions
+        const closeModal = () => {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scroll
+            }, 300);
+        };
+
+        // Close when clicking X
+        closeBtn.addEventListener('click', closeModal);
+
+        // Close when clicking outside of modal content
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                closeModal();
+            }
+        });
+    }
+
+    // 8. Hero Background Slideshow
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+        const bgImages = [
+            'img/bg_bmw_1772820065857.png',
+            'img/bg_harley_1772820088597.png',
+            'img/bg_ducati_1772820107758.png',
+            'img/bg_mv_1772820140184.png'
+        ];
+        let currentBgIndex = 0;
+
+        // Preload images to avoid flashing
+        bgImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        setInterval(() => {
+            currentBgIndex = (currentBgIndex + 1) % bgImages.length;
+            heroSection.style.backgroundImage = `url('${bgImages[currentBgIndex]}')`;
+        }, 5000);
+    }
+
 });
